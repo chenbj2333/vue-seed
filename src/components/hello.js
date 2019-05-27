@@ -2,11 +2,11 @@ import { Component, Vue, Prop } from 'vue-property-decorator'
 import template from './hello.html'
 import './hello.scss'
 
- @Component({
+@Component({
   template
 })
 class Hello extends Vue {
-   @Prop({
+  @Prop({
     type: String,
     default: 'hello'
   })

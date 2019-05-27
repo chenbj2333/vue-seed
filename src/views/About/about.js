@@ -1,10 +1,9 @@
 import { Component, Vue } from 'vue-property-decorator'
 import template from './about.html'
 
- @Component({
+@Component({
   template
 })
-class About extends Vue {
-}
+class About extends Vue {}
 
 export default About
