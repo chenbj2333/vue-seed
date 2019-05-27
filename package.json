@@ -10,7 +10,8 @@
     "lint:style": "stylelint src/**/*.scss --syntax scss",
     "prettier": "node ./scripts/prettier.js",
     "test:unit": "vue-cli-service test:unit",
-    "test": "mocha-webpack --glob '*.spec.js' --recursive --grep spec.js"
+    "test": "mocha-webpack --glob '*.spec.js' --recursive --grep spec.js",
+    "commitmsg": "commitlint --color --edit"
   },
   "checkFiles": [
     "src/**/*.js*",
@@ -51,6 +52,7 @@
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.0.0",
     "html-loader": "^0.5.5",
+    "husky": "^2.3.0",
     "node-sass": "^4.9.0",
     "prettier": "^1.17.1",
     "sass-loader": "^7.1.0",
