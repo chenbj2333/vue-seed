@@ -1,6 +1,6 @@
 import { Component, Vue, Prop } from 'vue-property-decorator'
 import template from './hello.html'
-import './hello.scss'
+import './hello.scss';
 
 @Component({
   template

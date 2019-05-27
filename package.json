@@ -3,17 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
+    "lint": "yarn lint:prettier && yarn lint:style",
     "lint:prettier": "check-prettier lint",
+    "lint:style": "stylelint src/**/*.scss --syntax scss",
     "prettier": "node ./scripts/prettier.js",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "test": "mocha-webpack --glob '*.spec.js' --recursive --grep spec.js"
   },
   "checkFiles": [
     "src/**/*.js*",
     "src/**/*.scss",
     "scripts/**/*.js"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint",
+      "commit-msg": "commitlint --color --edit"
+    }
+  },
   "dependencies": {
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
@@ -26,6 +35,8 @@
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-proposal-decorators": "^7.4.4",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@commitlint/cli": "^7.6.1",
+    "@commitlint/config-angular": "^7.6.0",
     "@vue/cli-plugin-babel": "^3.7.0",
     "@vue/cli-plugin-eslint": "^3.7.0",
     "@vue/cli-plugin-unit-mocha": "^3.7.0",
@@ -43,6 +54,10 @@
     "node-sass": "^4.9.0",
     "prettier": "^1.17.1",
     "sass-loader": "^7.1.0",
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-scss": "^3.6.1",
+    "stylelint-webpack-plugin": "^0.10.5",
     "vue-template-compiler": "^2.5.21"
   }
 }
