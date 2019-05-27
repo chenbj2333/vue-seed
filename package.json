@@ -9,9 +9,9 @@
     "lint:prettier": "check-prettier lint",
     "lint:style": "stylelint src/**/*.scss --syntax scss",
     "prettier": "node ./scripts/prettier.js",
+    "commitmsg": "commitlint --color --edit",
     "test:unit": "vue-cli-service test:unit",
-    "test": "mocha-webpack --glob '*.spec.js' --recursive --grep spec.js",
-    "commitmsg": "commitlint --color --edit"
+    "test": "mocha-webpack --glob '*.spec.js' --recursive --grep spec.js"
   },
   "checkFiles": [
     "src/**/*.js*",
