@@ -10,8 +10,7 @@
     "lint:style": "stylelint src/**/*.scss --syntax scss",
     "prettier": "node ./scripts/prettier.js",
     "commitmsg": "commitlint --color --edit",
-    "test:unit": "vue-cli-service test:unit",
-    "test": "mocha-webpack --glob '*.spec.js' --recursive --grep spec.js"
+    "test:unit": "vue-cli-service test:unit"
   },
   "checkFiles": [
     "src/**/*.js*",
