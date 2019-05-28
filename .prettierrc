@@ -2,7 +2,7 @@
   "semi": false,
   "arrowParens": "always",
   "singleQuote": true,
-  "printWidth": 100,
+  "printWidth": 150,
   "overrides": [
     {
       "files": ".prettierrc",
